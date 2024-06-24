@@ -1,0 +1,32 @@
+body {
+    background-color: #f0f0f0;
+    background-image: url('../images/start_page.jpeg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    margin: 0;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #0000FF; 
+    text-align: center; 
+    font-size: 80px; 
+    font-family: 'Playwrite Australia SA', sans-serif; 
+}
+
+
+h1 a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+
+h1:hover {
+    font-size: 90px; 
+    color: #40E0D0; 
+    transition: font-size 0.3s, color 0.3s; 
+}
