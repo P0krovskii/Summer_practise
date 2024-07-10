@@ -1,4 +1,6 @@
 body {
+    width: 1920px; /* Ширина окна */
+    height: 1080px; /* Высота окна */
     background-color: #f0f0f0;
     background-image: url('../images/start_page.jpeg'); 
     background-size: cover; 
@@ -12,7 +14,7 @@ body {
 }
 
 h1 {
-    color: #0000FF; 
+    color: #4cb050; 
     text-align: center; 
     font-size: 80px; 
     font-family: 'Playwrite Australia SA', sans-serif; 
@@ -27,6 +29,6 @@ h1 a {
 
 h1:hover {
     font-size: 90px; 
-    color: #40E0D0; 
+    color: #81c784; 
     transition: font-size 0.3s, color 0.3s; 
 }

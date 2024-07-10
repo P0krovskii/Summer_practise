@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authorization</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url('https://i.ytimg.com/vi/kwh_n4Az6sU/maxresdefault.jpg'); 
+    }
+    
+    .rectangle {
+        width: 55vh;
+        height: 65vh;
+        background-color: #81c784;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    h1 {
+        margin-bottom: 60px;
+    }
+    
+    input {
+        margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="rectangle">
+      <h1>Authorization</h1>
+
+      <input type="text" placeholder="Ваш Логин">
+      <input type="password" placeholder="Ваш Пароль">
+  
+      <button onclick="inner()">Вход</button>
+  
+      <h4><a href="#" onclick="redirectToRegistration()">Регистрация</a></h4>
+  
+    </div>
+  </div>
+
+  <script>
+    function inner() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'ass.html'); // относительный путь к файлу
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          document.open();
+          document.write(xhr.responseText);
+          document.close();
+        } else {
+          alert('Ошибка: ' + xhr.status);
+        }
+      };
+      xhr.send();
+    }
+
+    function redirectToRegistration() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', '3_registration.html'); // относительный путь к файлу
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          document.open();
+          document.write(xhr.responseText);
+          document.close();
+        } else {
+          alert('Ошибка: ' + xhr.status);
+        }
+      };
+      xhr.send();
+    }
+  </script>
+</body>
+</html>

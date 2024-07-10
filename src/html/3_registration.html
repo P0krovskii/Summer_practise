@@ -1,24 +1,71 @@
 <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Registration</title>
-      <link rel="stylesheet" type="text/css" href="../css/2_athorization.css">
-    </head>
-    <body>
-        <h1>Registration</h1>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url('https://i.ytimg.com/vi/kwh_n4Az6sU/maxresdefault.jpg');
+    }
+    .rectangle {
+      width: 60vh;
+      height: 80vh;
+      background-color: #81c784;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      margin-bottom: 60px;
+    }
+    input {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="rectangle">
+      <h1>Registration</h1>
+      <input type="text" id="firstName" placeholder="Введите имя">
+      <input type="text" id="lastName" placeholder="Введите фамилию">
+      <input type="text" id="email" placeholder="Введите вашу почту">
+      <input type="password" id="password" placeholder="Введите пароль">
+      <input type="text" id="age" placeholder="Введите возраст">
+      <input type="text" id="accessCode" placeholder="Введите код доступа">
+      <button id="welcome-button">Зарегистрироваться</button>
+    </div>
+  </div>
 
-        <img src="../images/page_3.jpg" alt="Описание изображения">
-
-
-        <input type="text" placeholder="Ввидите имя">
-        <input type="text" placeholder="Ввидите фамилию">
-        <input type="text" placeholder="Введите вашу почту">
-        <input type="text" placeholder="Возраст">
-        <input type="text" placeholder="Код доступа (необязательно)">
-
-        <button>Зарегестрироваться</button>
-
-    </body>
-  </html>
+  <script>
+    document.getElementById("welcome-button").addEventListener("click", function(event) {
+            event.preventDefault(); // Отменяем стандартное действие перехода по ссылке
+    
+            // Выполняем AJAX-запрос к серверу
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'ass.html');
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    document.open();
+                    document.write(xhr.responseText);
+                    document.close();
+                } else {
+                    alert('Ошибка: ' + xhr.status);
+                }
+            };
+            xhr.send();
+        });
+  </script>
+</body>
+</html>

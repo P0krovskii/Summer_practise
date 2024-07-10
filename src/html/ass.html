@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Page</title>
+  <link rel="stylesheet" type="text/css" href="../css/6_read_per_acc.css">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh; /* Высота равная высоте видимой области */
+      background-repeat: no-repeat; 
+      background-position: center; 
+      background-size: cover; /* Масштабирование фона для покрытия всей области */
+      background-image: url('../images/start_page.jpeg');
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      width: 100%;
+      text-align: left; /* Выравнивание текста по левому краю */
+      box-sizing: border-box; /* Учитывает padding и border в ширину и высоту элемента */
+    }
+    
+    .header h1 {
+      margin: 0;
+    }
+    
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      width: 80%;
+      height: calc(100vh - 160px); /* Высота с учетом отступов */
+      box-sizing: border-box; /* Учитывает padding и border в ширину и высоту элемента */
+    }
+    
+    .center {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .left, .right {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px;
+      box-sizing: border-box; /* Учитывает padding и border в ширину и высоту элемента */
+    }
+    
+    .left {
+      width: 40%;
+      text-align: center;
+    }
+    
+    .left img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    
+    .left h5 {
+      margin-top: 10px;
+    }
+    
+    .right {
+      width: 55%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    
+    .icon-button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 15px;
+      margin: 10px;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: calc(50% - 20px); /* Две кнопки в ряд с учетом отступов */
+      text-align: center;
+    }
+    
+    .icon-button img {
+      max-width: 50px;
+      margin-bottom: 10px;
+    }
+    
+    .footer {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      text-align: center; /* Выравнивание текста по центру */
+      box-sizing: border-box; /* Учитывает padding и border в ширину и высоту элемента */
+      margin-top: auto; /* Автоматическое выравнивание по низу */
+    }
+    
+    .footer h4 {
+      margin: 0;
+    }
+    
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Alexandria Library</h1>
+  </div>
+
+  <div class="container">
+    <div class="left">
+      <img src="avatar.png" alt="Avatar">
+      <h5>Name</h5>
+    </div>
+
+    <div class="right">
+      <button class="icon-button">
+        <img src="icon1.png" alt="Иконка">
+        <span>Текст кнопки 1</span>
+      </button>
+      <button class="icon-button">
+        <img src="icon2.png" alt="Иконка">
+        <span>Текст кнопки 2</span>
+      </button>
+      <button class="icon-button">
+        <img src="icon3.png" alt="Иконка">
+        <span>Текст кнопки 3</span>
+      </button>
+      <button class="icon-button">
+        <img src="icon4.png" alt="Иконка">
+        <span>Текст кнопки 4</span>
+      </button>
+    </div>
+  </div>
+
+
+
+</body>
+</html>
